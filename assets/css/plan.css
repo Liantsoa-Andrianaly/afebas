@@ -165,17 +165,56 @@ body {
     height: 50px;
     margin-top: 50px ;
     margin-left: -5px;
-        max-height: 100px; /* Ajustez la hauteur maximale des images */
+  }
 
+  .billiard-room .table p {
+    text-align: center;
+    margin: 5px 0 0 0; 
+  }
+}
+
+/* Styles pour les écrans de téléphone mobile */
+/* Styles pour les écrans de téléphone mobile */
+@media (max-width: 576px) {
+  .billiard-room {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+  }
+
+  .billiard-room .table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .billiard-room .table img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Ajustez la hauteur maximale des images */
   }
 
   .billiard-room .table p {
     text-align: center;
     margin: 5px 0 0 0;
-     font-size: 12px; /* Ajustez la taille de la police si nécessaire */
+    font-size: 14px; /* Ajustez la taille de la police si nécessaire */
+  }
 
+  /* Aligner les tables 1 à 5 en haut */
+  .billiard-room .table:nth-child(1),
+  .billiard-room .table:nth-child(2),
+  .billiard-room .table:nth-child(3),
+  .billiard-room .table:nth-child(4),
+  .billiard-room .table:nth-child(5) {
+    grid-row: 1;
+  }
+
+  /* Aligner les tables 6 à 10 en bas */
+  .billiard-room .table:nth-child(6),
+  .billiard-room .table:nth-child(7),
+  .billiard-room .table:nth-child(8),
+  .billiard-room .table:nth-child(9),
+  .billiard-room .table:nth-child(10) {
+    grid-row: 2;
   }
 }
-
-/* Styles pour les écrans de téléphone mobile avec des tables plus grandes */
-
