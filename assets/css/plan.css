@@ -25,12 +25,13 @@ body {
 .table {
   text-align: center;
   perspective: 1000px;
+  margin: 10%;
 }
 
 .table img {
-  width: 200px;
+  width: 300px;
   height: 150px;
-  border: 2px solid #333;
+ margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s, box-shadow 0.5s, opacity 0.5s;
   transform-style: preserve-3d;
@@ -149,6 +150,9 @@ body {
 /* Styles pour les écrans de téléphone mobile */
 /* Styles pour les écrans de téléphone mobile */
 @media (max-width: 576px) {
+  #breadcrumbs{
+    margin-left: -50px;
+  }
   .billiard-room {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -189,9 +193,9 @@ body {
   }
 
   .billiard-room .table img {
-    width: 100%;
-    height: auto;
-    max-height: 150px; /* Ajustez la hauteur maximale des images */
+    width: 120%;
+    height: 50px;
+    max-height: 150px;
   }
 
   .billiard-room .table p {
@@ -207,6 +211,7 @@ body {
   .billiard-room .table:nth-child(4),
   .billiard-room .table:nth-child(5) {
     grid-row: 1;
+
   }
 
   /* Aligner les tables 6 à 10 en bas */
@@ -216,5 +221,6 @@ body {
   .billiard-room .table:nth-child(9),
   .billiard-room .table:nth-child(10) {
     grid-row: 2;
+    
   }
 }
