@@ -60,8 +60,7 @@
           <li><a class="active" href="index.html">Accueil</a></li>
           <li><a href="tableautournoi.html">Tableau du tournoi</a></li>
           <li><a href="plansalle.html">Plan de la salle</a></li>
-          <li><a href="vuebillard.html">Vue des billards</a></li>
-          <div class="search-contrainer">
+          <!--li><a href="vuebillard.html">Vue des billards</a></li-->
             <div class="sidebar">
 
               
@@ -70,6 +69,7 @@
                   <input type="text" placeholder="Rechercher...">
                 </form>
               </div>
+            </div>
         </ul>
         </ul>
         
@@ -86,7 +86,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/slide/_800.21-22-coupe-de-france-et-tn8-346-1.jpeg);">
+        <div class="carousel-item active" style="background-image: url(assets/img/image.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Welcome to <span>AFEBAS</span></h2>
@@ -170,6 +170,17 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.querySelector('.mobile-nav-toggle');
+      const navbar = document.querySelector('#navbar');
+  
+      burger.addEventListener('click', function () {
+        navbar.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 

@@ -64,7 +64,7 @@
           <li><a href="index.html">Accueil</a></li>
           <li><a class="active" href="tableautournoi.html">Tableau du tournoi</a></li>
           <li><a href="plansalle.html">Plan de la salle</a></li>
-          <li><a href="vuebillard.html">Vue des billards</a></li>
+          <!--li><a href="vuebillard.html">Vue des billards</a></li-->
           
 
             <div class="sidebar">
@@ -141,12 +141,12 @@
               </div>
           </div>
           <div class="round">
-              <div class="match">
+              <div class="match"  >
                  Joueur 12
               </div>
           </div>
       </div>
-      <div class="vs" >VS</div>
+      <div class="vs" style="color: black;" >VS</div>
       <div class="bracket1">
           <div class="round">
               <div class="match">
@@ -230,6 +230,17 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.querySelector('.mobile-nav-toggle');
+      const navbar = document.querySelector('#navbar');
+  
+      burger.addEventListener('click', function () {
+        navbar.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 

@@ -27,9 +27,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Muli", sans-serif;
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
+
+/*Back to top button*/
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -1962,4 +1961,46 @@ section {
   background: #3f0202;
   color: #fff;
   text-decoration: none;
+}
+/* Masquer le menu de navigation par défaut sur les petits écrans */
+@media (max-width: 991px) {
+  #navbar ul {
+    display: none;
+  }
+
+  /* Afficher le bouton burger */
+  .mobile-nav-toggle {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* Afficher le menu de navigation lorsque le bouton burger est cliqué */
+  #navbar.active ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    padding: 15px;
+    z-index: 999;
+  }
+
+  #navbar.active li {
+    margin: 10px 0;
+  }
+}
+
+/* Afficher le menu de navigation sur les grands écrans */
+@media (min-width: 992px) {
+  #navbar ul {
+    display: flex;
+  }
+
+  .mobile-nav-toggle {
+    display: none;
+  }
 }

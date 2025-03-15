@@ -4,8 +4,8 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: 0; /* Supprime les marges du body */
-    background-image: url('../img/ball.jpg');
-}
+    background-color: #524c4c;
+ }
 html, body {
     overflow-x: hidden; /* Empêche le défilement horizontal */
     width: 100vw; /* S'assure que le body ne dépasse pas la largeur de l'écran */
@@ -101,16 +101,33 @@ footer {
     }
 }
 
+/* Styles pour les écrans de téléphone mobile */
 @media (max-width: 768px) {
-    .match, select {
-        width: 100px;
-        height: 35px;
-        font-size: 14px;
+    .bracket-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .vs {
-        font-size: 60px;
+  
+    .bracket, .bracket1 {
+      width: 100%;
+      margin-bottom: 20px;
     }
-}
+  
+    .round {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .match {
+      width: 90%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  
+    
+  }
 
 @media (max-width: 480px) {
     .match, select {
@@ -122,3 +139,45 @@ footer {
         font-size: 40px;
     }
 }
+/* Masquer le menu de navigation par défaut sur les petits écrans */
+@media (max-width: 991px) {
+    #navbar ul {
+      display: none;
+    }
+  
+    /* Afficher le bouton burger */
+    .mobile-nav-toggle {
+      display: block;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  
+    /* Afficher le menu de navigation lorsque le bouton burger est cliqué */
+    #navbar.active ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: #000;
+      padding: 15px;
+      z-index: 999;
+    }
+  
+    #navbar.active li {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Afficher le menu de navigation sur les grands écrans */
+  @media (min-width: 992px) {
+    #navbar ul {
+      display: flex;
+    }
+  
+    .mobile-nav-toggle {
+      display: none;
+    }
+  }
